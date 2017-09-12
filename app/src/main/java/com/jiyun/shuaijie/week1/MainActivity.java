@@ -1,9 +1,13 @@
 package com.jiyun.shuaijie.week1;
 
+import android.app.Service;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -101,14 +105,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mbtn = (Button) findViewById(R.id.mbtn);
 
         mbtn.setOnClickListener(this);
-       /* strat_service = (Button) findViewById(R.id.strat_service);
+        strat_service = (Button) findViewById(R.id.strat_service);
         strat_service.setOnClickListener(this);
         destroy_service = (Button) findViewById(R.id.destroy_service);
         destroy_service.setOnClickListener(this);
         bind_strat_service = (Button) findViewById(R.id.bind_strat_service);
         bind_strat_service.setOnClickListener(this);
         bind_destroy_service = (Button) findViewById(R.id.bind_destroy_service);
-        bind_destroy_service.setOnClickListener(this);*/
+        bind_destroy_service.setOnClickListener(this);
 //        onClick(strat_service);
     }
 
@@ -120,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (BuildConfig.DEBUG)
                     Log.d("MainActivity", "---------------------------------------------------");
                 break;
-            /*case R.id.strat_service:
+            case R.id.strat_service:
                 startService(new Intent(getApplicationContext(), SubService.class));
                 break;
             case R.id.destroy_service:
@@ -149,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     conn = null;
                     service1 = null;
                 }
-                break;*/
+                break;
         }
     }
 
