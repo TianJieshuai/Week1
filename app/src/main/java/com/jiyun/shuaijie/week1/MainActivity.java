@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initView();
         //菲大使馆大使夫妇都是 黄金多少级啊开发环节都是空白m
+        //三地警方当时警方
         if (BuildConfig.DEBUG) Log.d("MainActivity", "onCreate");
     }
 
