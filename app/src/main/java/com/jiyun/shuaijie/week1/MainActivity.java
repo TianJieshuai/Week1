@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bind_strat_service.setOnClickListener(this);
         bind_destroy_service = (Button) findViewById(R.id.bind_destroy_service);
         bind_destroy_service.setOnClickListener(this);
+        //上的房贷首付
 //        onClick(strat_service);
     }
 
