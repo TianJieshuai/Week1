@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jiyun.shuaijie.week1.MainActivity">
+
+    <Button
+        android:id="@+id/mbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Hello World!" />
+<!--
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mbtn">
+
+        <Button
+            android:id="@+id/strat_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启服务" />
+
+        <Button
+            android:id="@+id/destroy_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭服务" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/bind_strat_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bind_开启服务" />
+
+        <Button
+            android:id="@+id/bind_destroy_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bind_关闭服务" />
+    </LinearLayout>-->
+</RelativeLayout>
