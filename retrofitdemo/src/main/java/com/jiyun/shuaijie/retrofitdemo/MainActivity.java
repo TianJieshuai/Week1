@@ -1,13 +1,11 @@
 package com.jiyun.shuaijie.retrofitdemo;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.AbsListView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.jiyun.shuaijie.retrofitdemo.adapter.MyAdapter;
 import com.jiyun.shuaijie.retrofitdemo.modle.retrofit.Entity;
@@ -27,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout mSRL;
     private int last;
     private int pno = 1;
+    private boolean flash = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 if (BuildConfig.DEBUG) Log.d("MainActivity", "last:" + last);
                 if (BuildConfig.DEBUG)
                     Log.d("MainActivity", "myAdapter.getCount():" + myAdapter.getCount());
-                if (scrollState == SCROLL_STATE_IDLE && last == myAdapter.getCount()) {
+                if (scrollState == SCROLL_STATE_IDLE && last == myAdapter.getCount() && flash) {
+                    flash = false;
                     sendGet(++pno);
                 }
             }
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         myAdapter.notifyDataSetChanged();
+                        flash = true;
                     }
                 });
             }

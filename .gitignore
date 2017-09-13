@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+*.docx
+~WRL0003.tmp
