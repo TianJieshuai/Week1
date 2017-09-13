@@ -3,11 +3,13 @@ package com.jiyun.shuaijie.mvpdemo.views;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.jiyun.shuaijie.mvpdemo.BuildConfig;
 import com.jiyun.shuaijie.mvpdemo.R;
 import com.jiyun.shuaijie.mvpdemo.apis.CallBack_Interface;
 import com.jiyun.shuaijie.mvpdemo.entity.Entity;
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements Login_View_Interf
 
     @Override
     public void succeed(Entity entity) {
+        if (BuildConfig.DEBUG) Log.d("MainActivity", entity.toString());
         Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
     }
 
