@@ -9,3 +9,5 @@
 .externalNativeBuild
 *.docx
 ~WRL0003.tmp
+/.idea/
+/gradle/
